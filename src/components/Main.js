@@ -12,7 +12,19 @@ const StyledMain = styled.div`
 
 const StyledH1 = styled.h1`
     font-family: 'Palette Mosaic', cursive;
-    color: ${pr => pr.theme.primaryColor};
+    color: blue ;
+`
+
+const StyledContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const StyledImg = styled.img`
+    width: 50rem;
+    height: 30rem;
+    margin-top: 3rem;
 `
 
 const Main = () => {
@@ -31,10 +43,10 @@ const Main = () => {
     return (
         <StyledMain>
             <StyledH1>Photo of the day</StyledH1>
-            <div className = 'container'>
-                <img src = {image} alt = 'photo of the day' />
+            <StyledContainer>
+                <StyledImg src = {image} alt = 'photo of the day' />
                 <Caption caption = { caption } />
-            </div>
+                </StyledContainer>
         </StyledMain>
     )
 }
